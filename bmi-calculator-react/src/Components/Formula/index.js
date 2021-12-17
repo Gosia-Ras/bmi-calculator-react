@@ -1,7 +1,7 @@
-const Formula = ({formula}) => {
+const Formula = ({title}) => {
   return (
     <div>
-      <p className="paragraph">{formula}</p>
+      <p className="paragraph">{title}</p>
     </div>
   );
 };

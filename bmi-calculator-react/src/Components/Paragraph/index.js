@@ -1,7 +1,7 @@
-const Paragraph = ({text}) => {
+const Paragraph = ({title}) => {
   return (
     <p className="paragraph">
-      {text}
+      {title}
     </p>
   );
 };

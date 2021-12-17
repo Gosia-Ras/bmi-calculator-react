@@ -1,3 +1,6 @@
+import Button from "./Buttons";
+import Result from "./Result";
+
 const Form = () => {
   return (
     <form className="form js-form">
@@ -39,12 +42,8 @@ const Form = () => {
         required
       />
       <span className="js-heightSpan">CM</span>
-      <div>
-        <button className="form__button" type="submit">
-          Calculate
-        </button>
-      </div>
-      <div className="form__result" id="bmi-results"></div>
+      <Button />
+      <Result />
     </form>
   );
 };
