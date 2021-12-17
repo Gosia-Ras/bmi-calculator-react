@@ -15,7 +15,7 @@ function App() {
       />
       <Form />
       <Formula title="Formula for BMI = weight (kg) / height (m)2" />
-      <Footer title="Copyright 2021 by Malgorzata Ras. All rights reserved." />
+      <Footer title="Coded in 2021 by Malgorzata Ras" />
     </Container>
   );
 }
