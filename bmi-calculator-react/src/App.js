@@ -14,7 +14,7 @@ function App() {
       you're a healthy weight."
       />
       <Form />
-      <Formula title="Formula for BMI = weight (kg) / height (m)2" />
+      <Formula />
       <Footer title="Coded in 2021 by Malgorzata Ras" />
     </Container>
   );
