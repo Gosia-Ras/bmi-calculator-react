@@ -1,22 +1,20 @@
-import './App.css';
+import Header from "./Components/Header";
+import Form from "./Components/Form";
+import Container from "./Components/Container";
+import Paragraph from "./Components/Paragraph";
+import Formula from "./Components/Formula";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header title="BMI Calculator" />
+      <Paragraph
+        text="Use this calculator to check your body mass index (BMI) and find out if
+      you're a healthy weight."
+      />
+      <Form />
+      <Formula formula="Formula for BMI = weight (kg) / height (m)2" />
+    </Container>
   );
 }
 
