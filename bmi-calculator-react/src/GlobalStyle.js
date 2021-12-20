@@ -11,10 +11,9 @@ box-sizing: inherit;
 }
 
 body {
-    max-width: 1000px;
-    margin: 0px auto;
+    max-width: fit-content;
+    margin: 0 auto;
     font-family: "Maven Pro", sans-serif;
-    background-color: rgba(224,238,239,255)
-
+    background-color: rgba(224,238,239,255);
   }
 `;

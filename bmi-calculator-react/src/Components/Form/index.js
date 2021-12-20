@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Buttons";
 import Result from "./Result";
-import { StyledForm, StyledInput } from "./styled";
+import { StyledForm, StyledInput, StyledTitle } from "./styled";
 
 const Form = () => {
   const [height, setHeight] = useState("");
@@ -20,7 +20,7 @@ const Form = () => {
 
   return (
     <StyledForm onSubmit={calculate} formattedbmi={formattedbmi}>
-      <p>Weight in KG</p>
+      <StyledTitle>Weight in KG</StyledTitle>
       <StyledInput
         value={weight}
         onChange={({ target }) => setMass(target.value)}
@@ -28,7 +28,7 @@ const Form = () => {
         min={1}
         placeholder="Enter weight in KG"
       />
-      <p>Height in CM</p>
+      <StyledTitle>Height in CM</StyledTitle>
       <StyledInput
         value={height}
         onChange={({ target }) => setHeight(target.value)}

@@ -7,6 +7,7 @@ export const StyledButton = styled.button`
   background-color: teal;
   color: aliceblue;
   border: none;
+  max-width: 50%;
   transition: transform 1s;
 
   &:hover {

@@ -6,4 +6,5 @@ export const StyledHeader = styled.header`
   text-align: center;
   padding: 10px;
   border-radius: 20px;
+  margin-top: 20px;
 `;

@@ -5,7 +5,7 @@ export const StyledParagraph = styled.p`
   background-color: aliceblue;
   font-weight: 300;
   padding: 5px;
-  max-width: max-content;
+  max-width: 50%;
   border-radius: 20px;
   text-align: center;
 `;
