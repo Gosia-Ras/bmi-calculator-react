@@ -1,8 +1,10 @@
+import { StyledParagraph } from "./styled";
+
 const Paragraph = ({title}) => {
   return (
-    <p className="paragraph">
+    <StyledParagraph>
       {title}
-    </p>
+    </StyledParagraph>
   );
 };
 

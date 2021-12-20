@@ -1,10 +1,10 @@
+import { StyledButton } from "./styled";
+
 const Button = () => {
   return (
-    <div>
-      <button className="form__button" type="submit">
-        Calculate
-      </button>
-    </div>
+    <StyledButton type="submit">
+      Calculate
+    </StyledButton>
   );
 };
 
