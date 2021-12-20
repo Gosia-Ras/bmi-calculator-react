@@ -5,25 +5,29 @@ import { StyledForm, StyledInput, StyledTitle } from "./styled";
 
 const Form = () => {
   const [height, setHeight] = useState("");
-  const [weight, setMass] = useState("");
+  const [weight, setWeight] = useState("");
   const [bmi, setBmi] = useState(0);
 
-  const formattedbmi = Math.round(bmi * 100) / 100;
+  const formattedbmi = (Math.round(bmi * 100) / 100).toFixed(2);
 
-  const calculate = (event) => {
-    event.preventDefault();
+  const calculate = () => {
     const heightMeters = height / 100;
     const bmi = weight / (heightMeters * heightMeters);
-
     setBmi(bmi);
   };
 
+  const onSubmit = (event) => {
+    event.preventDefault();
+    calculate();
+
+  }
+
   return (
-    <StyledForm onSubmit={calculate} formattedbmi={formattedbmi}>
+    <StyledForm onSubmit={onSubmit} formattedbmi={formattedbmi}>
       <StyledTitle>Weight in KG</StyledTitle>
       <StyledInput
         value={weight}
-        onChange={({ target }) => setMass(target.value)}
+        onChange={({ target }) => setWeight(target.value)}
         required
         min={1}
         placeholder="Enter weight in KG"
