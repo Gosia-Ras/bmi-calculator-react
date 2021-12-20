@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Button from "./Buttons";
 import Result from "./Result";
+import { StyledForm, StyledInput } from "./styled";
 
 const Form = () => {
-  const [height, setHeight] = useState(0);
-  const [weight, setMass] = useState(0);
+  const [height, setHeight] = useState("");
+  const [weight, setMass] = useState("");
   const [bmi, setBmi] = useState(0);
 
   const formattedbmi = Math.round(bmi * 100) / 100;
@@ -13,34 +14,31 @@ const Form = () => {
     event.preventDefault();
     const heightMeters = height / 100;
     const bmi = weight / (heightMeters * heightMeters);
-    
+
     setBmi(bmi);
   };
 
   return (
-    <form 
-      onSubmit={calculate} 
-      formattedbmi={formattedbmi} 
-      className="form">
-      <p>Weight</p>
-      <input
+    <StyledForm onSubmit={calculate} formattedbmi={formattedbmi}>
+      <p>Weight in KG</p>
+      <StyledInput
         value={weight}
-        onChange={(event) => setMass(event.target.value)}
+        onChange={({ target }) => setMass(target.value)}
         required
         min={1}
+        placeholder="Enter weight in KG"
       />
-      <span className="span">KG</span>
-      <p>Height</p>
-      <input
+      <p>Height in CM</p>
+      <StyledInput
         value={height}
-        onChange={(event) => setHeight(event.target.value)}
+        onChange={({ target }) => setHeight(target.value)}
         required
         min={54}
+        placeholder="Enter height in CM"
       />
-      <span className="span">CM</span>
       <Button />
       <Result bmi={bmi} />
-    </form>
+    </StyledForm>
   );
 };
 
