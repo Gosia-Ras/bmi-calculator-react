@@ -6,7 +6,7 @@ import { StyledForm, StyledInput, StyledTitle } from "./styled";
 const Form = () => {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
-  const [bmi, setBmi] = useState(0);
+  const [bmi, setBmi] = useState();
 
   const calculate = () => {
     const bmi = (weight / (height / 100) ** 2).toFixed(2);
