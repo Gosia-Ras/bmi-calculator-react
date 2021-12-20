@@ -8,22 +8,18 @@ const Form = () => {
   const [weight, setWeight] = useState("");
   const [bmi, setBmi] = useState(0);
 
-  const formattedbmi = (Math.round(bmi * 100) / 100).toFixed(2);
-
   const calculate = () => {
-    const heightMeters = height / 100;
-    const bmi = weight / (heightMeters * heightMeters);
+    const bmi = (weight / (height / 100) ** 2).toFixed(2);
     setBmi(bmi);
   };
 
   const onSubmit = (event) => {
     event.preventDefault();
     calculate();
-
-  }
+  };
 
   return (
-    <StyledForm onSubmit={onSubmit} formattedbmi={formattedbmi}>
+    <StyledForm onSubmit={onSubmit}>
       <StyledTitle>Weight in KG</StyledTitle>
       <StyledInput
         value={weight}
