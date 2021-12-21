@@ -16,5 +16,6 @@ body {
     font-family: "Maven Pro", sans-serif;
     background-color: #d1d8e0;
     color: #4b6584;
+    padding: 10px;
   }
 `;
