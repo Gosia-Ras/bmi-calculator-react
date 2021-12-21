@@ -28,4 +28,4 @@ To calculate your BMI:
 3. Click the "calculate" button.
 
 ##
-![BMI Calculator](https://raw.githubusercontent.com/Gosia-Ras/bmi-calculator-react/main/bmi-calculator-react/public/calculator_resize.JPG)
+![BMI Calculator](https://raw.githubusercontent.com/Gosia-Ras/bmi-calculator-react/main/public/calculator_resize.JPG)
