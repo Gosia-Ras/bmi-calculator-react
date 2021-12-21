@@ -20,7 +20,7 @@ const Form = () => {
 
   return (
     <StyledForm onSubmit={onSubmit}>
-      <StyledTitle>Weight in KG</StyledTitle>
+      <StyledTitle>Weight</StyledTitle>
       <StyledInput
         value={weight}
         onChange={({ target }) => setWeight(target.value)}
@@ -28,7 +28,7 @@ const Form = () => {
         min={1}
         placeholder="Enter weight in KG"
       />
-      <StyledTitle>Height in CM</StyledTitle>
+      <StyledTitle>Height</StyledTitle>
       <StyledInput
         value={height}
         onChange={({ target }) => setHeight(target.value)}

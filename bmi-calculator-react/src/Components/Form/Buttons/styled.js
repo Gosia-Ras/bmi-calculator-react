@@ -4,14 +4,14 @@ export const StyledButton = styled.button`
   padding: 10px;
   margin-top: 10px;
   border-radius: 15px;
-  background-color: teal;
+  background-color: #eb3b5a;
   color: aliceblue;
   border: none;
   max-width: 50%;
-  transition: transform 1s;
+  transition: transform 3s linear;
 
   &:hover {
-    background-color: rgb(1, 102, 102);
+    background-color: #E84F6A;
     transform: scale(1.1);
   }
 `;

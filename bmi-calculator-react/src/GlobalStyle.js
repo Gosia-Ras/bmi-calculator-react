@@ -14,6 +14,7 @@ body {
     max-width: fit-content;
     margin: 0 auto;
     font-family: "Maven Pro", sans-serif;
-    background-color: rgba(224,238,239,255);
+    background-color: #d1d8e0;
+    color: #4b6584;
   }
 `;
