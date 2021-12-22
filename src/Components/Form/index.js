@@ -14,13 +14,17 @@ const Form = () => {
     const bmi = (weight / (height / 100) ** 2).toFixed(2);
     setBmi(bmi);
     if (bmi < 18.5) {
-      setClassification("Under Weight");
+      setClassification("Underweight");
     } else if (bmi > 18.5 && bmi <= 24.9) {
       setClassification("Healthy");
     } else if (bmi > 24.9 && bmi < 30) {
-      setClassification("Overweight");
+      setClassification("Pre-obesity");
+    } else if (bmi < 35) {
+      setClassification("Obesity class I");
+    } else if (bmi < 40) {
+      setClassification("Obesity class II");
     } else {
-      setClassification("Obese");
+      setClassification("Obesity class III");
     }
   };
 
@@ -51,7 +55,7 @@ const Form = () => {
         placeholder="Enter height in CM"
       />
       <Button />
-      <Result bmi={bmi} classification={classification}/>
+      <Result bmi={bmi} classification={classification} />
     </StyledForm>
   );
 };
