@@ -25,7 +25,8 @@ const Form = () => {
         value={weight}
         onChange={({ target }) => setWeight(target.value)}
         required
-        min={1}
+        min={26}
+        max={635}
         placeholder="Enter weight in KG"
       />
       <StyledTitle>Height</StyledTitle>
@@ -34,6 +35,7 @@ const Form = () => {
         onChange={({ target }) => setHeight(target.value)}
         required
         min={54}
+        max={272}
         placeholder="Enter height in CM"
       />
       <Button />
