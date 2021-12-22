@@ -2,7 +2,6 @@ import Header from "./Components/Header";
 import Form from "./Components/Form";
 import Container from "./Components/Container";
 import Paragraph from "./Components/Paragraph";
-import Formula from "./Components/Formula";
 import Footer from "./Components/Footer";
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
       you're a healthy weight."
         />
         <Form />
-        <Formula />
       </Container>
       <Footer title="Coded in 2021 by Malgorzata Ras" />
     </>

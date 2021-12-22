@@ -1,16 +1,27 @@
 import { useState } from "react";
 import Button from "./Buttons";
 import Result from "./Result";
+import Formula from "./Formula";
 import { StyledForm, StyledInput, StyledTitle } from "./styled";
 
 const Form = () => {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
+  const [classification, setClassification] = useState();
   const [bmi, setBmi] = useState();
 
   const calculate = () => {
     const bmi = (weight / (height / 100) ** 2).toFixed(2);
     setBmi(bmi);
+    if (bmi < 18.5) {
+      setClassification("Under Weight");
+    } else if (bmi > 18.5 && bmi <= 24.9) {
+      setClassification("Healthy");
+    } else if (bmi > 24.9 && bmi < 30) {
+      setClassification("Overweight");
+    } else {
+      setClassification("Obese");
+    }
   };
 
   const onSubmit = (event) => {
@@ -20,6 +31,7 @@ const Form = () => {
 
   return (
     <StyledForm onSubmit={onSubmit}>
+      <Formula />
       <StyledTitle>Weight</StyledTitle>
       <StyledInput
         value={weight}
@@ -39,7 +51,7 @@ const Form = () => {
         placeholder="Enter height in CM"
       />
       <Button />
-      <Result bmi={bmi} />
+      <Result bmi={bmi} classification={classification}/>
     </StyledForm>
   );
 };
