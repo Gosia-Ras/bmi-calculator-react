@@ -14,6 +14,7 @@ export const StyledInput = styled.input`
   border-radius: 15px;
 `;
 
-export const StyledTitle = styled.p`
+export const StyledTitle = styled.label`
   text-align: center;
+  padding: 5px;
 `;
