@@ -1,20 +1,20 @@
 import Header from "./Components/Header";
 import Form from "./Components/Form";
-import Container from "./Components/Container";
-import Paragraph from "./Components/Paragraph";
 import Footer from "./Components/Footer";
+import { StyledParagraph } from "./Components/Paragraph/styled";
+import { StyledContainer} from "./Components/Container/styled";
 
 function App() {
   return (
     <>
-      <Container>
+      <StyledContainer>
         <Header title="Adult BMI Calculator" />
-        <Paragraph
-          title="Use this calculator to check your body mass index (BMI) and find out if
-      you're a healthy weight."
-        />
+        <StyledParagraph>
+          Use this calculator to check your body mass index (BMI) and find out
+          if you're a healthy weight.
+        </StyledParagraph>
         <Form />
-      </Container>
+      </StyledContainer>
       <Footer title="Coded in 2021 by Malgorzata Ras" />
     </>
   );
