@@ -11,7 +11,7 @@ export const StyledButton = styled.button`
   transition: transform 3s linear;
 
   &:hover {
-    background-color: #E84F6A;
+    background-color: #e84f6a;
     transform: scale(1.1);
   }
 `;

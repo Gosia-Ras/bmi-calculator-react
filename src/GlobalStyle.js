@@ -2,13 +2,13 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 html {
-    box-sizing: border-box;
-    overflow-y: scroll;
- }
-
-*, ::after, ::before {
-box-sizing: inherit;
+  box-sizing: border-box;
 }
+
+    *, ::after, ::before {
+  box-sizing: inherit;
+}
+
 
 body {
     max-width: fit-content;
