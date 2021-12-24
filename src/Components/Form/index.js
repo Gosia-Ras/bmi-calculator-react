@@ -10,12 +10,12 @@ const Form = () => {
   const [classification, setClassification] = useState();
   const [bmi, setBmi] = useState();
 
-  const calculate = () => {
+  const calculateBMI = () => {
     const bmi = (weight / (height / 100) ** 2).toFixed(2);
     setBmi(bmi);
     if (bmi < 18.5) {
       setClassification("Underweight");
-    } else if (bmi > 18.5 && bmi <= 24.9) {
+    } else if (bmi <= 24.9) {
       setClassification("Healthy");
     } else if (bmi > 24.9 && bmi < 30) {
       setClassification("Pre-obesity");
@@ -30,7 +30,7 @@ const Form = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    calculate();
+    calculateBMI();
   };
 
   return (
