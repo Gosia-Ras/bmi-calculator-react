@@ -1,10 +1,10 @@
 import { StyledResult, StyledResultWrapper } from "./styled";
 
-const Result = ({ bmi, classification }) => {
+const Result = ({ bmi, getBMI }) => {
   return (
     <StyledResultWrapper>
       <StyledResult>{bmi && <>Your BMI is {bmi.toFixed(2)}</>}</StyledResult>
-      <StyledResult>{classification}</StyledResult>
+      <StyledResult>{getBMI()}</StyledResult>
     </StyledResultWrapper>
   );
 };

@@ -7,24 +7,30 @@ import { StyledForm, StyledInput, StyledTitle } from "./styled";
 const Form = () => {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
-  const [classification, setClassification] = useState();
   const [bmi, setBmi] = useState();
 
   const calculateBMI = () => {
-    const bmi = (weight / (height / 100) ** 2);
+    const bmi = weight / (height / 100) ** 2;
     setBmi(bmi);
+  };
+
+  const getBMI = (bmi) => {
     if (bmi < 18.5) {
-      setClassification("Underweight");
-    } else if (bmi <= 24.9) {
-      setClassification("Healthy");
-    } else if (bmi > 24.9 && bmi < 30) {
-      setClassification("Pre-obesity");
-    } else if (bmi < 35) {
-      setClassification("Obesity class I");
-    } else if (bmi < 40) {
-      setClassification("Obesity class II");
+      return "Underweight";
+    }
+    if (bmi >= 18.5 && bmi < 24.9) {
+      return "Normal weight";
+    }
+    if (bmi >= 25 && bmi < 29.9) {
+      return "Overweight";
+    }
+    if (bmi < 35) {
+      return "Obesity class I";
+    }
+    if (bmi < 40) {
+      return "Obesity class I";
     } else {
-      setClassification("Obesity class III");
+      return "Obesity class III";
     }
   };
 
@@ -55,7 +61,7 @@ const Form = () => {
         placeholder="Enter height in CM"
       />
       <Button />
-      <Result bmi={bmi} classification={classification} />
+      <Result bmi={bmi} getBMI={getBMI}/>
     </StyledForm>
   );
 };
