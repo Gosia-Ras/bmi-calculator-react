@@ -11,7 +11,7 @@ const Form = () => {
   const [bmi, setBmi] = useState();
 
   const calculateBMI = () => {
-    const bmi = (weight / (height / 100) ** 2).toFixed(2);
+    const bmi = (weight / (height / 100) ** 2);
     setBmi(bmi);
     if (bmi < 18.5) {
       setClassification("Underweight");
