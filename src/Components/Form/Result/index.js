@@ -3,13 +3,13 @@ import { StyledResult, Wrapper } from "./styled";
 const Result = ({ bmi }) => {
   const getbmi = (bmi) => {
     if (bmi < 18.5 && bmi > 0) {
-      return <div>Underweight</div>;
+      return "Underweight";
     }
     if (bmi > 26) {
-      return <div>Overweight</div>;
+      return "Overweight";
     }
     if (bmi > 18.5 && bmi < 26) {
-      return <div>Healthy</div>;
+      return "Healthy";
     }
   };
   return (
