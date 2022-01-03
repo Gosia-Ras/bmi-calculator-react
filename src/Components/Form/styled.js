@@ -12,6 +12,7 @@ export const StyledInput = styled.input`
   margin: 0px auto;
   border: none;
   border-radius: 15px;
+  width: 200px;
 `;
 
 export const StyledTitle = styled.label`
