@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-export const StyledResult = styled.p`
-  padding: 15px;
-  margin: 0px auto;
-  max-width: max-content;
+export const StyledResult = styled.span`
+  text-align: center;
   font-weight: 800;
+  line-height: 2.5;
 `;
 
-export const StyledResultWrapper = styled.div`
+export const Wrapper = styled.div`
   padding: 20px;
   height: 100px;
 `;

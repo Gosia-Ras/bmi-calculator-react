@@ -1,7 +1,6 @@
-import { StyledResult, StyledResultWrapper } from "./styled";
+import { StyledResult, Wrapper } from "./styled";
 
 const Result = ({ bmi }) => {
-
   const getbmi = (bmi) => {
     if (bmi < 18.5 && bmi > 0) {
       return <div>Underweight</div>;
@@ -14,10 +13,10 @@ const Result = ({ bmi }) => {
     }
   };
   return (
-    <StyledResultWrapper>
+    <Wrapper>
       <StyledResult>{bmi && <>Your BMI is {bmi.toFixed(2)}</>}</StyledResult>
       <StyledResult>{getbmi(bmi)}</StyledResult>
-    </StyledResultWrapper>
+    </Wrapper>
   );
 };
 export default Result;
