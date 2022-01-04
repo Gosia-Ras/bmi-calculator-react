@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const StyledResult = styled.p`
   text-align: center;
   font-weight: 800;
-  line-height: 2;
+  color: ${({ danger }) => (danger ? "red" : "#126E3D")};
+
 `;
 
 export const Wrapper = styled.div`
