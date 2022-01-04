@@ -8,5 +8,4 @@ export const StyledResult = styled.p`
 
 export const Wrapper = styled.div`
   padding: 20px;
-  height: 100px;
 `;

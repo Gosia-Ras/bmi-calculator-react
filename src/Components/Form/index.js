@@ -35,9 +35,9 @@ const Form = () => {
       <StyledTitle>Height</StyledTitle>
       <StyledInput
         value={height}
-        onChange={({ target }) => setHeight(target.value)}
-        required
         type="number"
+        onChange={({ target }) => setHeight(target.value)}
+        required  
         min="54"
         max="272"
         placeholder="Enter height in CM"

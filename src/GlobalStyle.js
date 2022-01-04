@@ -9,7 +9,6 @@ html {
   box-sizing: inherit;
 }
 
-
 body {
     max-width: fit-content;
     margin: 0 auto;
