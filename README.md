@@ -14,12 +14,13 @@ https://gosia-ras.github.io/bmi-calculator-react/ <- click here to see how it wo
 ## Tools: 
 
 - HTML
-- CSS + Styled Components
+- CSS
+- Styled-components
 - GlobalStyle
 - ES6+
 - Flex
-- React.js
-- useState
+- React
+- Hooks: useState
 
 ## 
 To calculate your BMI: 
